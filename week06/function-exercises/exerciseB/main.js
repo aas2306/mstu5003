@@ -1,15 +1,42 @@
 // Magic Number Guessing Game
 
 // Math.random() generates a number between 0 and 0.999999
-var magicNum = Math.ceil(Math.random() * 100);
-// What does this line of code actually do part by part?
-// What is the range of possible integers here?
+var magicNumber = Math.ceil(Math.random() * 100);
+// What does this line of code actually do part by part? (It creates a whole number from 1 to 100)
+// What is the range of possible integers here? [1-100]
 
 
 
 // Create a function that prompts the user to guess a number within the range of possible numbers and compares the user number to the magic number. Return String, 'low' if user number is low. 'high' if user number is high, 'exact' if user number is correct.
 
+var userNumber = prompt("Guess a whole number from 1 to 100.");
+
+function checkNumbers(userNumber, magicNumber) {
+    if (userNumber === magicNumber) {
+        return "exact";
+    } else if (userNumber > magicNumber) {
+        return "high";
+    } else {
+        return "low";
+    }
+}
+
+var y = checkNumbers(userNumber, magicNumber);
+
 // Create a function that takes low, high, or exact as a String argument, and uses this value to give a feedback message to the user.
+
+function feedback(x) {
+  if (x === "high") {
+    alert("Nope, too high.");
+  } else if (x === "low") {
+    alert("Nope, too low.");
+  } else {
+    alert("Congratulations, you guessed!");
+  }
+}
+
+feedback(y);
+
 
 // Continue this game until the correct number is chosen.
 

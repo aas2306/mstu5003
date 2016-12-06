@@ -79,7 +79,7 @@ var pieListEl = document.querySelector('#pie-list');
 // INITIALIZING MODAL http://getbootstrap.com/javascript/#modal-usage
 $('#pieModal').modal({
 	backdrop: true, // what if we change this to false?
-	keybaord: true, // what if we change this to false?
+	keyboard: true, // what if we change this to false?
 	show: false, // what if we change this to true?
 });
 

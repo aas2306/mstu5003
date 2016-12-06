@@ -48,7 +48,7 @@ function printAnimals(animalList){
 			foodStatus += "Vegetables ";
 		}
 		if (animal.diet.vegetation && animal.diet.meat) {
-			foodStatus += "and "
+			foodStatus += "and ";
 		}
 		if (animal.diet.meat) {
 			foodStatus += "Meat";
